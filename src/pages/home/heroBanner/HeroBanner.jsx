@@ -29,10 +29,11 @@ const HeroBanner = () => {
 
     return (
         <div className="heroBanner">
-            {!loading && <div className="backdrop-img">
+            {!loading && (<div className="backdrop-img">
                 <Img src={background} />
-            </div>}
+            </div>)}
 
+            <div className="opacity-layer"></div>
             <ContentWrapper>
                 <div className="heroBannerContent">
                     <span className="title">
@@ -49,7 +50,7 @@ const HeroBanner = () => {
                             onChange={(e) => setQuery(e.target.value)}
                             onKeyUp={searchQueryHandler}
                         />
-                        <button>Search</button>
+                        <button className="button">Search</button>
                     </div>
                 </div>
             </ContentWrapper>
