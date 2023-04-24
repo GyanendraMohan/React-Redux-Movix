@@ -10,7 +10,7 @@ import SearchResult from './pages/searchResult/SearchResult';
 import Explore from './pages/explore/Explore';
 import PageNotFound from './pages/404/PageNotFound';
 import Header from './components/header/Header';
-// import Footer from './components/footer/Footer';
+import Footer from './components/footer/Footer';
 function App() {
   const dispatch = useDispatch()
   const { url
@@ -31,7 +31,6 @@ function App() {
           poster: res.images.secure_base_url + "original",
           profile: res.images.secure_base_url + "original",
         }
-
         dispatch(getApiConfiguration(url))
       })
   }
@@ -46,7 +45,7 @@ function App() {
         <Route path="/explore/:mediaType" element={<Explore />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   )
 }
